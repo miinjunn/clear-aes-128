@@ -12,8 +12,8 @@ def rotate(state):
     return temp
 
 
-rotate_bro = rotate(s_matrix)
-print(rotate_bro)
+# rotate_bro = rotate(s_matrix)
+# print(rotate_bro)
 
 
 # shift
@@ -29,12 +29,12 @@ def shifting(state):
     return shift_r
 
 
-shift_bro = shifting(rotate_bro)
-print(shift_bro)
+# shift_bro = shifting(rotate_bro)
+# print(shift_bro)
 
 # rotate balik
-rotate_balik_bro = rotate(shift_bro)
-print(rotate_balik_bro)
+# rotate_balik_bro = rotate(shift_bro)
+# print(rotate_balik_bro)
 
 # cara kerja shift-row pada kodingan ini:
 # rotate-shift-rotate
@@ -48,5 +48,5 @@ def shift_row(state):
 
 
 # tes
-r1_shift_row = shift_row(s_matrix)
-print(f"r1 shift-row: {r1_shift_row}")
+# r1_shift_row = shift_row(s_matrix)
+# print(f"r1 shift-row: {r1_shift_row}")
