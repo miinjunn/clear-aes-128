@@ -187,8 +187,8 @@ def add_round_key(state_1, state_2):
 # Input (plaintext)
 # Two One Nine Two
 # plain = input('input plaintext: ')
-# plain = "Two One Nine Two"
-plain = "ZerO Hour To yOU"
+# plain = "ZerO Hour To yOU"
+plain = "Two One Nine Two"
 print(plain)
 print(f'Plain Karakter: {len(plain)}')
 plain_hex = encode_hex(plain)
