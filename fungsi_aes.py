@@ -19,6 +19,8 @@ sbox = [
 
 # ------------------------------------------------------------------------------------------
 # text to hex
+
+
 def encode_hex(text):
     text = [i for i in text]                # split tiap 1 char
     temp = []
@@ -33,6 +35,23 @@ def cek_jumlah_karakter(text):
     while len(text) < 16:
         text.append('00')
     return text
+
+# olah input: text to dec
+def olah_input(plain, key):
+    plaintext = encode_hex(plain)
+    keyword = encode_hex(key)
+    plaintext, keyword = hex_to_int(plaintext, keyword)
+    return plaintext, keyword
+
+
+# olah input (new) -> optimize ver.
+def break_input(inputan: str):
+    temp = []
+    input = [hex(ord(i))[2:] for i in inputan]      # convert ke hex
+    while len(input) < 16:                          # padd 00 jika char < 16
+        input.append("00")
+    temp = [int(i, base=16) for i in input]        # convert ke dec
+    return temp
 
 
 # ------------------------------------------------------------------------------------------
