@@ -17,8 +17,8 @@ def rotate(state):
 
 
 # shift
-def shift(word, n):
-    return word[n:]+word[0:n]
+def shift(state, n):
+    return state[n:]+state[0:n]
 
 
 def shifting(state):
@@ -28,6 +28,13 @@ def shifting(state):
         shift_r += shift(temp, i)
     return shift_r
 
+
+def shifting_inv(state):
+    shift_inv = []
+    for i in range(4):
+        temp = state[i*4:i*4+4]
+        shift_inv += shift(temp, -i)
+    return shift_inv
 
 # shift_bro = shifting(rotate_bro)
 # print(shift_bro)
@@ -45,6 +52,13 @@ def shift_row(state):
     geser = shifting(rot)
     shiftRow = rotate(geser)
     return shiftRow
+
+
+def shift_row_inv(state):
+    rot = rotate(state)
+    geser = shifting_inv(rot)
+    shiftRow_inv = rotate(geser)
+    return shiftRow_inv
 
 
 # tes
